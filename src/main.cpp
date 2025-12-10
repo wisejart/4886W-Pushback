@@ -305,6 +305,7 @@ void autonomous(void) {
   case 1: // Solo AWP
 
 
+    DriveDist(10,30,0);
   
 
     break;
@@ -425,10 +426,12 @@ if (!Controller1.ButtonR1.pressing() && !Controller1.ButtonR2.pressing() && !Con
         ScoreButton = 1;
         if (ScoreStatus == 0) // It's Down now
         {
-          ScoreUp; // it goes up
+          ScoreUp; // it goes up         
+          FingerUp; 
         } else     // It's already up
         {
           ScoreDown; // makes it go down
+          FingerDown;
         }
       }
     } else // L1 bit pressed let up
